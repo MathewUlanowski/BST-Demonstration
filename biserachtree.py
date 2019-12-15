@@ -1,9 +1,11 @@
+# class for creating nodes with only an integer required
 class Node:
     def __init__(self,key):
         self.left=None
         self.right=None
         self.val = key
 
+# inserts a value into the BST as a node with null left and right pointers
 def Insert(node, InsertingNode):
     if InsertingNode > node.val:
         if node.right is None:
@@ -16,6 +18,7 @@ def Insert(node, InsertingNode):
         else:
             Insert(node.left, InsertingNode)
 
+# this is the node search function that seraches all of the children of the node for a given number
 def BiSearch(number, node):
     if node.val == number:
         return True
@@ -30,6 +33,8 @@ def BiSearch(number, node):
             return BiSearch(number, node.left)
         return False
 
+
+# class for creating the binary search tree
 class BST:
     def __init__(self, rootval):
         self.root = Node(rootval)
