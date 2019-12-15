@@ -30,7 +30,6 @@ def BiSearch(number, node):
             return BiSearch(number, node.left)
         return False
 
-
 class BST:
     def __init__(self, rootval):
         self.root = Node(rootval)
